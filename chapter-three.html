@@ -1,51 +1,419 @@
 <html>
-		<head>
+	<head>
 		<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title>Video</title>
+				<title>William Corr Github Pages Project</title>
 				<link rel="stylesheet" href="css/normalize.css">
 				<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-		
-		<style>
-				
-				#borderimg1 {
-					border: 20px solid transparent;
-					padding: 15px;
-					-webkit-border-image: url(https://previews.123rf.com/images/vertyr/vertyr1302/vertyr130200040/18149263-seamless-floral-background-of-traditional-russian-folk-art-painting-hohloma-.jpg) round; /* Safari 3.1-5 */
-					-o-border-image: url(https://previews.123rf.com/images/vertyr/vertyr1302/vertyr130200040/18149263-seamless-floral-background-of-traditional-russian-folk-art-painting-hohloma-.jpg) round; /* Opera 11-12.1 */
-					border-image: url(https://previews.123rf.com/images/vertyr/vertyr1302/vertyr130200040/18149263-seamless-floral-background-of-traditional-russian-folk-art-painting-hohloma-.jpg) round;
-					border-image-slice: 15%;
-					
-					body {
-					background-color: linen;
-					border-right: 5px solid maroon; 
-					border-left: 5px solid maroon;
-					border-right-style:groove;
-					}
 
-					h1 {
-					color: maroon;
-					margin-left: 60px;
-					} 
+			<style>
+			
+
+			
+				
+						#borderimg1 {
+						border: 20px solid transparent;
+						padding: 15px;
+						-webkit-border-image: url(https://previews.123rf.com/images/vertyr/vertyr1302/vertyr130200040/18149263-seamless-floral-background-of-traditional-russian-folk-art-painting-hohloma-.jpg) round; /* Safari 3.1-5 */
+						-o-border-image: url(https://previews.123rf.com/images/vertyr/vertyr1302/vertyr130200040/18149263-seamless-floral-background-of-traditional-russian-folk-art-painting-hohloma-.jpg) round; /* Opera 11-12.1 */
+						border-image: url(https://previews.123rf.com/images/vertyr/vertyr1302/vertyr130200040/18149263-seamless-floral-background-of-traditional-russian-folk-art-painting-hohloma-.jpg) round;
+						border-image-slice: 15%;
+                        }
+			            
+						body {
+						
+                  border-right: 5px solid maroon; 
+						border-left: 5px solid maroon;
+						border-right-style:groove;
+                        
+                  background: linear-gradient(270deg,#f5b3af, #e33a30, #f9f9f9);
+                  background-size: 600% 600%;
+
+                  -webkit-animation: AnimationName 34s ease infinite;
+                  -moz-animation: AnimationName 34s ease infinite;
+                  -o-animation: AnimationName 34s ease infinite;
+                  animation: AnimationName 34s ease infinite;
+						}
+						h1 {
+						color: maroon;
+						margin-left: 60px;
+						} 
+						h2{
+						color: black; 
+						}
+						
+						p {
+						color: black; 
+						margin-left: 20px; 
+						}
+						
 					
-					h2{
-					color: black; 
-					}
-					
-					p {
-					color: black; 
-					margin-left: 20px; 
-					}
-					
-					a{
-					color: red; 
-					margin-right:20px; 
-					}
-		</style>
-		</head>
-		
-		<body id = "borderimg1">
-		
+						
+						b{
+							color:linen; 
+						}
+                            @-webkit-keyframes AnimationName {
+                            0%{background-position:0% 51%}
+                            50%{background-position:100% 50%}
+                            100%{background-position:0% 51%}
+                        }
+                        @-moz-keyframes AnimationName {
+                            0%{background-position:0% 51%}
+                            50%{background-position:100% 50%}
+                            100%{background-position:0% 51%}
+                        }
+                        @-o-keyframes AnimationName {
+                            0%{background-position:0% 51%}
+                            50%{background-position:100% 50%}
+                            100%{background-position:0% 51%}
+                        }
+                        @keyframes AnimationName {
+                            0%{background-position:0% 51%}
+                            50%{background-position:100% 50%}
+                            100%{background-position:0% 51%}
+                        }
+                        
+                     .draw-outline {
+                    display: inline-block;
+                    padding: 16px 28px;
+                    border: 2px black solid;
+                    text-align: center;
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    transition: border-color 0.35s ease-in-out;
+                    z-index: 1;
+                    }
+                    .draw-outline:before, .draw-outline:after {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    box-sizing: content-box;
+                    z-index: -1;
+                    transition: -webkit-transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+                    padding-left: 2px;
+                    }
+                    .draw-outline:before {
+                    top: -2px;
+                    left: -2px;
+                    border-top: 2px transparent solid;
+                    border-right: 2px transparent solid;
+                    }
+                    .draw-outline:after {
+                    bottom: -2px;
+                    right: -2px;
+                    border-bottom: 2px transparent solid;
+                    border-left: 2px transparent solid;
+                    }
+                    .draw-outline:hover {
+                    color: #37b2b2;
+                    transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+                    border-color: black;
+                    -webkit-animation: outline-reset 0.35s 1 forwards;
+                            animation: outline-reset 0.35s 1 forwards;
+                    }
+                    .draw-outline:hover:before {
+                    -webkit-animation: top-right-border 0.75s 1 0.35s forwards;
+                            animation: top-right-border 0.75s 1 0.35s forwards;
+                    }
+                    .draw-outline:hover:after {
+                    -webkit-animation: bottom-left-border 0.75s 1 1.1s forwards;
+                            animation: bottom-left-border 0.75s 1 1.1s forwards;
+                    }
+                    .draw-outline--tandem:hover:after {
+                    -webkit-animation: bottom-left-border 0.75s 1 0.35s forwards;
+                            animation: bottom-left-border 0.75s 1 0.35s forwards;
+                    }
+                    .draw-outline:active:before, .draw-outline:active:after {
+                    -webkit-transform: scale(1.05);
+                            transform: scale(1.05);
+                    }
+
+                    @-webkit-keyframes outline-reset {
+                    0% {
+                        border-color: black;
+                    }
+                    100% {
+                        border-color: transparent;
+                    }
+                    }
+
+                    @keyframes outline-reset {
+                    0% {
+                        border-color: black;
+                    }
+                    100% {
+                        border-color: transparent;
+                    }
+                    }
+                    @-webkit-keyframes top-right-border {
+                    0% {
+                        border-color: #37b2b2;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #37b2b2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @keyframes top-right-border {
+                    0% {
+                        border-color: #37b2b2;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #37b2b2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @-webkit-keyframes bottom-left-border {
+                    0% {
+                        border-color: #37b2b2;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #37b2b2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @keyframes bottom-left-border {
+                    0% {
+                        border-color: #37b2b2;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #37b2b2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    .swipe-fill {
+                    display: inline-block;
+                    padding: 16px 28px;
+                    border: 2px black solid;
+                    text-align: center;
+                    text-decoration: none;
+                    color: black;
+                    background: white;
+                    position: relative;
+                    overflow: hidden;
+                    transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+                    z-index: 1;
+                    border-radius: 0px;
+                    }
+                    .swipe-fill:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #666;
+                    transition: -webkit-transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+                    z-index: -1;
+                    }
+                    .swipe-fill--up:before {
+                    -webkit-transform: translate3d(0, 100%, 0);
+                            transform: translate3d(0, 100%, 0);
+                    }
+                    .swipe-fill--down:before {
+                    -webkit-transform: translate3d(0, -100%, 0);
+                            transform: translate3d(0, -100%, 0);
+                    }
+                    .swipe-fill--left:before {
+                    -webkit-transform: translate3d(-100%, 0, 0);
+                            transform: translate3d(-100%, 0, 0);
+                    }
+                    .swipe-fill--right:before {
+                    -webkit-transform: translate3d(100%, 0, 0);
+                            transform: translate3d(100%, 0, 0);
+                    }
+                    .swipe-fill:hover {
+                    color: white;
+                    border: 2px black solid;
+                    }
+                    .swipe-fill:hover:before {
+                    -webkit-transform: translate3d(0, 0, 0);
+                            transform: translate3d(0, 0, 0);
+                    }
+                    
+                          .draw-outline {
+                    display: inline-block;
+                    padding: 16px 28px;
+                    border: 2px black solid;
+                    text-align: center;
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    transition: border-color 0.35s ease-in-out;
+                    z-index: 1;
+                    }
+                    .draw-outline:before, .draw-outline:after {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    box-sizing: content-box;
+                    z-index: -1;
+                    transition: -webkit-transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+                    padding-left: 2px;
+                    }
+                    .draw-outline:before {
+                    top: -2px;
+                    left: -2px;
+                    border-top: 2px transparent solid;
+                    border-right: 2px transparent solid;
+                    }
+                    .draw-outline:after {
+                    bottom: -2px;
+                    right: -2px;
+                    border-bottom: 2px transparent solid;
+                    border-left: 2px transparent solid;
+                    }
+                    .draw-outline:hover {
+                    color: #37b2b2;
+                    transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+                    border-color: black;
+                    -webkit-animation: outline-reset 0.35s 1 forwards;
+                            animation: outline-reset 0.35s 1 forwards;
+                    }
+                    .draw-outline:hover:before {
+                    -webkit-animation: top-right-border 0.75s 1 0.35s forwards;
+                            animation: top-right-border 0.75s 1 0.35s forwards;
+                    }
+                    .draw-outline:hover:after {
+                    -webkit-animation: bottom-left-border 0.75s 1 1.1s forwards;
+                            animation: bottom-left-border 0.75s 1 1.1s forwards;
+                    }
+                    .draw-outline--tandem:hover:after {
+                    -webkit-animation: bottom-left-border 0.75s 1 0.35s forwards;
+                            animation: bottom-left-border 0.75s 1 0.35s forwards;
+                    }
+                    .draw-outline:active:before, .draw-outline:active:after {
+                    -webkit-transform: scale(1.05);
+                            transform: scale(1.05);
+                    }
+
+                    @-webkit-keyframes outline-reset {
+                    0% {
+                        border-color: black;
+                    }
+                    100% {
+                        border-color: transparent;
+                    }
+                    }
+
+                    @keyframes outline-reset {
+                    0% {
+                        border-color: black;
+                    }
+                    100% {
+                        border-color: transparent;
+                    }
+                    }
+                    @-webkit-keyframes top-right-border {
+                    0% {
+                        border-color: #37b2b2;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #37b2b2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @keyframes top-right-border {
+                    0% {
+                        border-color: #37b2b2;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #37b2b2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @-webkit-keyframes bottom-left-border {
+                    0% {
+                        border-color: #37b2b2;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #37b2b2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @keyframes bottom-left-border {
+                    0% {
+                        border-color: #37b2b2;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #37b2b2;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    
+                    
+
+		   </style>
+  </head>
+
+			<body id = "borderimg1">
+
+			
 		<h1> Chapter Three:</h1><h2> Ritual of the Rival Tribes</h2>
 		
 		<h3>
@@ -78,11 +446,13 @@
 		
 		<p>
 
-		</p>
-		<a href ="chapter-two.html"> previous << page Chapter Two</a>
-		<a href ="chapter-three.html"> next >> page Chapter Three</a>
-		</p>
 		
+		
+			 <div class="button-container">
+			<h3>End of Chapter: 1</h3>
+			<a href=""chapter-two.html" class="swipe-fill swipe-fill--left">Previous Chapter</a>
+			<a href="chapter-four.html" class="swipe-fill swipe-fill--right">Next Chapter</a>
+			</div>
 		
 	<hr>
 		<audio controls>

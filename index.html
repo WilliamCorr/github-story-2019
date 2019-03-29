@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+ 
+
+ <style type="text/css">
+                    html {
+                    width: 100%;
+                    height: 100%;
+                    display: table;
+                    text-align: center;
+                    }
+
+                    body {
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    background: #F5F1E9;
+                    transition: all 0.5s ease;
+                    }
+ 
+                    .draw-outline {
+                    display: inline-block;
+                    padding: 16px 28px;
+                    border: 2px black solid;
+                    text-align: center;
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    transition: border-color 0.35s ease-in-out;
+                    z-index: 1;
+                    }
+                    .draw-outline:before, .draw-outline:after {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    box-sizing: content-box;
+                    z-index: -1;
+                    transition: -webkit-transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+                    padding-left: 2px;
+                    }
+                    .draw-outline:before {
+                    top: -2px;
+                    left: -2px;
+                    border-top: 2px transparent solid;
+                    border-right: 2px transparent solid;
+                    }
+                    .draw-outline:after {
+                    bottom: -2px;
+                    right: -2px;
+                    border-bottom: 2px transparent solid;
+                    border-left: 2px transparent solid;
+                    }
+                    .draw-outline:hover {
+                    color: #8E1600;
+                    transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+                    border-color: black;
+                    -webkit-animation: outline-reset 0.35s 1 forwards;
+                            animation: outline-reset 0.35s 1 forwards;
+                    }
+                    .draw-outline:hover:before {
+                    -webkit-animation: top-right-border 0.75s 1 0.35s forwards;
+                            animation: top-right-border 0.75s 1 0.35s forwards;
+                    }
+                    .draw-outline:hover:after {
+                    -webkit-animation: bottom-left-border 0.75s 1 1.1s forwards;
+                            animation: bottom-left-border 0.75s 1 1.1s forwards;
+                    }
+                    .draw-outline--tandem:hover:after {
+                    -webkit-animation: bottom-left-border 0.75s 1 0.35s forwards;
+                            animation: bottom-left-border 0.75s 1 0.35s forwards;
+                    }
+                    .draw-outline:active:before, .draw-outline:active:after {
+                    -webkit-transform: scale(1.05);
+                            transform: scale(1.05);
+                    }
+
+                    @-webkit-keyframes outline-reset {
+                    0% {
+                        border-color: black;
+                    }
+                    100% {
+                        border-color: transparent;
+                    }
+                    }
+
+                    @keyframes outline-reset {
+                    0% {
+                        border-color: black;
+                    }
+                    100% {
+                        border-color: transparent;
+                    }
+                    }
+                    @-webkit-keyframes top-right-border {
+                    0% {
+                        border-color: #8E1600;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #8E1600;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @keyframes top-right-border {
+                    0% {
+                        border-color: #8E1600;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #8E1600;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @-webkit-keyframes bottom-left-border {
+                    0% {
+                        border-color: #8E1600;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #8E1600;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    @keyframes bottom-left-border {
+                    0% {
+                        border-color: #8E1600;
+                        width: 0px;
+                        height: 0;
+                    }
+                    50% {
+                        width: 100%;
+                        height: 0;
+                    }
+                    100% {
+                        border-color: #8E1600;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    }
+                    .swipe-fill {
+                    display: inline-block;
+                    padding: 16px 28px;
+                    border: 2px black solid;
+                    text-align: center;
+                    text-decoration: none;
+                    color: black;
+                    background: white;
+                    position: relative;
+                    overflow: hidden;
+                    transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+                    z-index: 1;
+                    border-radius: 0px;
+                    }
+                    .swipe-fill:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #666;
+                    transition: -webkit-transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out;
+                    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+                    z-index: -1;
+                    }
+                    .swipe-fill--up:before {
+                    -webkit-transform: translate3d(0, 100%, 0);
+                            transform: translate3d(0, 100%, 0);
+                    }
+                    .swipe-fill--down:before {
+                    -webkit-transform: translate3d(0, -100%, 0);
+                            transform: translate3d(0, -100%, 0);
+                    }
+                    .swipe-fill--left:before {
+                    -webkit-transform: translate3d(-100%, 0, 0);
+                            transform: translate3d(-100%, 0, 0);
+                    }
+                    .swipe-fill--right:before {
+                    -webkit-transform: translate3d(100%, 0, 0);
+                            transform: translate3d(100%, 0, 0);
+                    }
+                    .swipe-fill:hover {
+                    color: white;
+                    border: 2px black solid;
+                    }
+                    .swipe-fill:hover:before {
+                    -webkit-transform: translate3d(0, 0, 0);
+                            transform: translate3d(0, 0, 0);
+                    }
+
+                    @keyframes rot_kf { from { transform: rotate(0deg);   }
+
+                      to   { transform: rotate(360deg); } }
+
+                      .rot { animation: rot_kf 1s linear infinite; }
+                    
+                                        
+                    #buttons {
+                    position: absolute;
+                    width: 8%;
+                    margin: 2% 0 0 2%;
+                    }
+
+                    #buttons a {
+                    font-size: 12px;
+                    display: block;
+                    padding: 5px;
+                    background: rgba(0,0,0, .1);
+                    color: rgba(0,0,0, .6);
+                    margin-bottom: 5px;
+                    text-decoration: none;
+                    border: solid 1px rgba(0,0,0, .1);
+                    text-shadow: 0px 1px 1px rgba(255,255,255, .7);
+                    transition: all 0.5s ease;
+                    }
+                    #buttons a:hover,
+                    #buttons a.selected {
+                    background: rgba(0,0,0, .3);
+                    }
+                    #buttons a.selected {
+                    cursor: default;
+                    }
+
+                    #wheel {
+                    position: relative;
+                    margin: 0 auto;
+                    display: block;
+                    width: 400px;
+                    height: 400px;
+                    background: url("https://banner2.kisspng.com/20180506/yre/kisspng-mandala-yantra-clip-art-5aef7e54348787.9920488315256448842152.jpg") no-repeat;
+                    background-size: cover;
+                    border-radius: 196px;
+                    overflow: hidden;
+                    box-shadow: 0 0 7px #333;
+                    
+                    $speed_base: 0.7;
+                    
+                    @function speedometer($n) {
+                        @return $speed_base * $n + s;
+                    }
+                    
+                    &.speed30 {
+                        animation-name: rotate_wheel;
+                        animation-iteration-count: infinite;
+                        animation-play-state: running;
+                        animation-timing-function: linear;
+                        animation-duration: speedometer(7);
+                    }
+                      
+                    @keyframes rotate_wheel { 
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                    }
+
+ </style>
+
+ <circle class="rot" 
+
+  cx="0" cy="1" r="2" stroke="blue" fill="none"/>
+
+</svg>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>William Corr Github Pages Project</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="buttons">
+       <a href="javascript:;" data-speed="speed30" data-bg="#FFE5BD">30 Km/h</a>
+        </div>
+        <span id="wheel"></span> 
+        
+        <div class="button-container">
+        <a href="chapter-one.html" class="draw-outline draw-outline--tandem">William Corr Github Pages Project</a>
+        </div>
+        
+        <hr>
+        <audio controls>
+        <source src="https://ia802702.us.archive.org/6/items/RiteOfSpring/05LeSacreDuPrintempstheRiteOfSpringBalletIn2PartsForOrchestra_64kb.mp3" type="audio/mpeg">
+        <source src="audio/sample.ogg" type="audio/ogg"><!-- the ogg file type needs to be added on archive.org for cross browser compatability-->
+      </audio>
+        
+      
+       
+</body>
+</html>
+
+ <script>
+                    document.addEvent('domready', function(){
+                    var _wheel = $('wheel');
+                    
+                    $$('a').addEvent('click', function(){
+                        
+                        if (!this.hasClass('selected')) {
+                        $$('a.selected').removeClass('selected');
+                        var that = this;
+                        that.addClass('selected');
+                        _wheel.erase('class');
+                        
+                        setTimeout(function(){
+                            _wheel.addClass(that.get('data-speed'));
+                        }, 5);
+                        document.body.setStyle('background',this.get('data-bg'));
+                        }
+                    });
+                    
+                    });
+ </script>
+

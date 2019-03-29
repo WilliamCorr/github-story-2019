@@ -1,0 +1,12 @@
+The audio component uses one half of Stravinskys the Rite of Spring, which is souced at archive.org under common usage.
+The themes of the Rite of Spring as partially drawn on for inspiration. 
+
+https://www.kisspng.com/png-mandala-yantra-clip-art-1850795/download-png.html - the mandala design on the front page (free from copyright)
+
+https://codepen.io/MatthewShields/pen/WOEBPG/ - for the buttons
+
+https://www.youtube.com/watch?v=E1qdU1JnSpc - inspiration for the story 
+
+https://www.theguardian.com/artanddesign/gallery/2016/dec/21/europes-oldest-pagans-mari-people-ikuru-kuwajima - more inspiration for the story
+
+https://www.gradient-animator.com/ - background animations
